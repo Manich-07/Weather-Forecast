@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather App</title>
+<style>
+    /* Import fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    nav {
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        color: #333;
+        padding: 20px;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        border-bottom: 1px solid black;
+    }
+    nav div {
+        font-size: 1.8rem;
+        font-family: 'Poppins', sans-serif;
+    }
+    nav h1 {
+        font-weight: 300;
+    }
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 1.3rem;
+        transition: color 0.2s;
+    }
+    nav ul li a:hover {
+        color: #1b5eef;
+        text-decoration: underline;
+    }
+    .background-image {
+        background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+    }
+    .background-image h3 {
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .background-image p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+    .background-image a {
+        padding: 15px 20px;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        margin: 20px 0;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.5s ease-in-out;
+    }
+    .background-image a:hover {
+        background-color: #fff;
+        color: #333;
+    }
+    .text {
+        position: relative;
+        padding: 50px;
+        background-color: rgb(218, 218, 251);
+        color: #333;
+        font-size: 1rem;
+    }
+    .text h2 {
+        font-size: 2rem;
+    }
+    .text h5 {
+        font-size: 1.2rem;
+    }
+    .text p, .text h2, .text h5 {
+        margin-bottom: 15px;
+    }
+    strong {
+        font-size: 1.5rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        nav div, nav h1 {
+            font-size: 1.5rem;
+        }
+        nav ul {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        nav ul li {
+            margin: 5px 0;
+        }
+        .background-image h3 {
+            font-size: 2rem;
+        }
+        .background-image p {
+            font-size: 1rem;
+        }
+        .text {
+            padding: 30px;
+        }
+        .text h2 {
+            font-size: 1.8rem;
+        }
+        .text h5 {
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        nav div, nav h1 {
+            font-size: 1.2rem;
+        }
+        .background-image h3 {
+            font-size: 1.8rem;
+        }
+        .background-image p {
+            font-size: 0.9rem;
+        }
+        .background-image a {
+            font-size: 1rem;
+            padding: 10px 15px;
+        }
+        .text {
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        .text h2 {
+            font-size: 1.5rem;
+        }
+        .text h5 {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+</head>
+<body>
+<nav>
+    <div>
+    <h1>Weather Application</h1>
+    </div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Settings</a></li>
+    </ul>
+</nav>
+<section class="background-image">
+    <h3>Welcome to Our Website</h3>
+    <p>Get the latest weather updates and more.</p>
+    <a href="/weather.html">Weather Chudu Guru</a>
+
+</section>
+<section class="text" id="home">
+    
+    <div class="home">
+        <p><h2>Welcome to Weather Application:    <strong> Weather Chudu Guru!</strong></h2>
+            Stay ahead of the weather with our real-time forecasts, designed to keep you informed and prepared, no matter where you are. With Weather Application, you can enjoy accurate, up-to-date weather data tailored to your location and daily needs.
+            <br>
+            <h3>Key Features:</h3>
+            <h5>Live Weather Updates:</h5>Get instant insights on temperature, precipitation, humidity, and more.<br>
+            <h5>Hourly & Weekly Forecasts:</h5>Plan your day or week with confidence.
+            <h5>Severe Weather Alerts:</h5>Stay safe with timely notifications for storms, heavy rainfall, and other extreme conditions.
+            <h5>Interactive Weather Maps:</h5> Explore radar, satellite, and precipitation maps for a deeper understanding.<br>
+            <h5>Personalized Experience:</h5> Save multiple locations and receive alerts specific to each.</p>
+    </div>
+</section>
+<hr>
+<section class="text" id="about">
+    <div class="about">
+        <p><h2>About Us: <strong>Reliable Weather Guide</strong></h2>
+            At [Weather Chudu Guru], we’re passionate about helping you navigate life’s daily weather challenges. Our mission is to deliver accurate, real-time weather information that empowers you to make informed decisions with ease and confidence.<br>
+            
+            <h4>Who We Are</h4  >
+            We’re a team of dedicated meteorologists, developers, and data scientists working together to bring you cutting-edge weather technology. With advanced forecasting tools, our app transforms complex weather data into user-friendly insights that make sense for everyone.<br>
+            
+            <h4>What We Stand For</h4>
+            Our goal is to provide weather updates that are reliable, accessible, and personalized. We believe that knowing what’s coming your way—whether it’s rain, shine, snow, or storms—should be simple, accessible, and accurate.<br>
+            
+            <h4>How We Make a Difference</h4>
+            <h5>Real-Time Accuracy:</h5> Using state-of-the-art weather tracking, we deliver updates you can count on.
+            <h5>Safety & Awareness:</h5> We send timely alerts for severe weather, helping keep you and your loved ones safe.
+            <h5>Community Focus:</h5> By offering hyper-local forecasts, we ensure that our information is relevant wherever you are.
+            Thank you for choosing [Weather Chudu Guru] as your trusted weather partner. We’re here to make sure you stay prepared, every day.</p>
+    </div>
+</section>
+<section class="text" id="contact">
+    <div class="contact">
+        <p>
+            <h2>Contact Us:<strong> We’re Here to Help</strong></h2>
+                Whether you have questions, feedback, or need support, the team at [App Name] is ready to assist. Your experience and satisfaction are our top priorities.<br>
+
+               <h5> Reach Out to Us</h5>
+                <h6>Email:</h6>weather@gmail.com<br>
+                For general inquiries, assistance, or troubleshooting, please feel free to send us an email. We strive to respond within 24 hours.<br>
+
+                <h6>Phone:</h6>9988776655<br>
+                Our customer service team is available Monday to Friday, 9 AM - 5 PM (local time) for any urgent inquiries.<br>
+
+               <h5>Address:</h5>
+                [weather Chudu Guru Headquarters],<br>
+                Mylavaram,<br>
+                Vijayawada,Ap,523001,<br>
+                India
+
+                <h5>Follow Us on Social Media</h5>
+                Stay updated with the latest features, weather tips, and news. Follow us on our social media channels:
+                <h6>Instagram:</h6> weather.com/Instagram.
+
+        </p>
+    </div>
+</section>
+</body>
+</html>
